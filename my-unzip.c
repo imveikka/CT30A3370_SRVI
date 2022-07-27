@@ -4,24 +4,20 @@
 
 
 int main(int argc, char *argv[]) {
-    // size_t size;
-    // size_t llen;
-    // char *line;
+
     FILE *fp;
     int count;
     char character;
-    // char character = 0;
-    // int count = 0;
 
-    if (argc > 1) {
+    if (argc > 1) { /* 1 or more file(s) given */
         for (int i = 1; i < argc; ++i) {
             if ((fp = fopen(argv[i], "rb")) == NULL) {
                 printf("wunzip: cannot open file\n");
                 exit(EXIT_FAILURE);
             }
-            while(fread(&count, 4, 1, fp)) {
-                fread(&character, 1, 1, fp);
-                for (int i = 0; i < count; ++i) putchar(character);
+            while(fread(&count, 4, 1, fp)) {    /* Read int first */
+                fread(&character, 1, 1, fp);    /* Read common char */
+                for (int i = 0; i < count; ++i) putchar(character); /* Result in stdout */
             }
         }
         fclose(fp);
