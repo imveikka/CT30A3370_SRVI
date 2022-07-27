@@ -5,20 +5,20 @@ make
 ```
 ## Run
 ```bash
-reverse [INPUT] [OUTPUT]
+./reverse [INPUT] [OUTPUT]
 ```
 ```bash
-my-cat FILE...
+./my-cat FILE...
 ```
 ```bash
-my-grep FILE...
+./my-grep FILE...
 ```
 ```bash
-my-zip FILE...
+./my-zip FILE...
 ```
 ```bash
-my-unzip FILE...
+./my-unzip FILE...
 ```
 ```bash
-wish [BATCH]
+./wish [BATCH]
 ```
