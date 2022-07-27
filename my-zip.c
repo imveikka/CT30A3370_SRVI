@@ -3,7 +3,7 @@ my-zip: compressing file by writing consecutive characters to one integer
 and one character. Supports reading multiple files.
 */
 
-#define _GNU_SOURCE /* For getline */
+#define _DEFAULT_SOURCE || _POSIX_C_SOURCE >= 200809L /* For getline */
 
 #include <stdio.h>
 #include <stdlib.h>
