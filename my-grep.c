@@ -4,7 +4,7 @@ or stdin. Prints each line in stdout that has given search term.
 Error messages are printed in stdout as well due to design requirements
 */
 
-#define _GNU_SOURCE /* For getline */
+#define _DEFAULT_SOURCE || _POSIX_C_SOURCE >= 200809L /* For getline */
 
 #include <stdio.h>
 #include <stdlib.h>
