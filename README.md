@@ -19,3 +19,6 @@ my-zip FILE...
 ```bash
 my-unzip FILE...
 ```
+```bash
+wish [BATCH]
+```
